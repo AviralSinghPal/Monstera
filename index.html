@@ -13,6 +13,8 @@
       href="https://fonts.googleapis.com/css?family=Abel"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
     <link rel="stylesheet" href="style.css">
     <style>
       /* Write styles here */
@@ -22,6 +24,7 @@
       #navbarMonstera{
         display: flex;
         justify-content: space-between;
+        /* align-items: center; */
         padding: 20px 20px;
         /* border: 2px solid black; */
         align-items: baseline;
@@ -40,6 +43,9 @@
         align-items: baseline;
         justify-content: space-between;
       }
+      #navMid div h4:hover{
+        transform: scale(1.1);
+      }
       #navEnd{
         display: flex;
         padding: 0px 30px;
@@ -51,6 +57,7 @@
       #midWhole{
         margin-left: 30px;
         display: flex;
+        /* flex-direction: column; */
         /* border: 2px solid black; */
         height: 100vh;
         justify-content: space-between;
@@ -86,6 +93,9 @@
         color: white;
         border-radius: 50px;
       }
+      #midWholePart121:hover{
+        transform: scale(1.1);
+      }
       #midWholePart13{
         margin-top: 100px;
         margin-left: 30px;
@@ -112,11 +122,38 @@
         font-family: Abel;
         font-weight: 500;
       }
-
+      .burger{
+        display: none;
+      }
+@media screen and (max-width:800px) {
+  #midWhole{
+    flex-direction: column;
+  }
+  #monstera{
+    font-size: 50px;
+  }
+  #imgMain{
+    height: 100vh;
+    width: 100vw;
+  }
+  #navMid{
+    display: none;
+  }
+  .burger{
+    display: block;
+    font-size: 30px;
+  }
+  #navEnd{
+    padding: 0px;
+    
+  }
+}
     </style>
   </head>
   <body>
     <nav id="navbarMonstera">
+      <div class="burger"><i class="fa-solid fa-bars"></i></div>
+         
       <div id="navFirst">
         <img src="./photos/Logo.svg" />
       </div>
